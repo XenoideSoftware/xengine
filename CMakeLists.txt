@@ -1,0 +1,19 @@
+cmake_minimum_required (VERSION 3.25)
+project (XE LANGUAGES CXX)
+
+include(XenoideConfig)
+
+set(XE_ENABLE_TESTING "${XENOIDE_ENABLE_TESTING}" CACHE BOOL "Enable the unit test suite" FORCE)
+
+option (XE_ENABLE_ENGINE_PLUGIN_PNG           "Include PNG image support via LodePNG" ON)
+option (XE_ENABLE_ENGINE_PLUGIN_GL            "Include OpenGL 3+ support" ON)
+option (XE_ENABLE_ENGINE_PLUGIN_GL_GLFW       "Include GLFW-based Window and Context creation support (requires 'XE_ENABLE_ENGINE_PLUGIN_GL')" ON)
+option (XE_ENABLE_ENGINE_PLUGIN_VULKAN        "Include Vulkan support" OFF)
+option (XE_ENABLE_ENGINE_PLUGIN_D3D11         "Include d3d11 support" OFF)
+option (XE_ENABLE_ENGINE_PLUGIN_DEVIL         "Include DevIL image loading support" OFF)
+option (XE_ENABLE_ENGINE_TOOL_KTXC            "Builds the KTX texture compiler" ON)
+option (XE_ENABLE_ENGINE_TOOL_GLTFC           "Builds the GLTF model compiler" ON)
+option (XE_ENABLE_ENGINE_TOOL_GLTFV           "Builds the GLTF model viewer" ON)
+option (XE_ENABLE_DEMOS                       "Builds the engine demos" ON)
+
+add_subdirectory("src")
