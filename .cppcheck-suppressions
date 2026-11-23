@@ -1,0 +1,7 @@
+# Baseline for existing findings. Fix the code, then remove the matching line.
+# Platform #error is only reached by cppcheck's preprocessor model.
+preprocessorErrorDirective:*/libxe-core/src/xe/Timer.cpp
+# Aggregate initialisers leave some POD members intentionally zero-initialised
+# by the caller; tracked separately from the build fixes.
+uninitMemberVar
+uninitMemberVarNoCtor

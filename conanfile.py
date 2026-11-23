@@ -7,7 +7,7 @@ import os
 class xeRecipe(ConanFile):
     name = "xe"
     version = "0.1.0"  # version file (source of truth); tags are v0.x.y markers
-    python_requires = "xenoide-base/0.1.0"
+    python_requires = "xenoide-base/0.1.1"
     python_requires_extend = "xenoide-base.XenoideCMake"
     package_type = "application"
     build_info_prefix = "XE"
@@ -15,7 +15,7 @@ class xeRecipe(ConanFile):
     # Optional metadata
     license = "MIT"
     author = "Felipe Apablaza <felipe.apablaza@protonmail.com>"
-    url = "https://github.com/XenoideSoftware/xe-engine"
+    url = "https://github.com/XenoideSoftware/xengine"
     description = "Game engine for C++ development"
     topics = ("game-engine", "graphics", "rendering", "vulkan", "opengl", "cross-platform")
 

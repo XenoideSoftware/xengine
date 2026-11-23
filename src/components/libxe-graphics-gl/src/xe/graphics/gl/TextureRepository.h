@@ -6,10 +6,10 @@
 #include <string>
 
 namespace xe {
-struct ImageData;
-class Renderer;
-class ImageLoader;
-}
+    struct ImageData;
+    class Renderer;
+    class ImageLoader;
+} // namespace xe
 class TextureRepository {
 public:
     explicit TextureRepository(xe::ImageLoader &loader);

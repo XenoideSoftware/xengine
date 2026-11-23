@@ -111,13 +111,11 @@ namespace xe {
                 return maxEdge;
             }
 
-            auto edges = &minEdge;
-
             TVector<T, N> point;
             for (int i = 0; i < N; ++i) {
                 const int remainder = pointIndex % 2;
                 pointIndex /= 2;
-                point[i] = edges[remainder][i];
+                point[i] = (remainder == 0 ? minEdge : maxEdge)[i];
             }
 
             return point;
@@ -150,6 +148,9 @@ namespace xe {
                     TVector3<T>{static_cast<T>(0), static_cast<T>(0), static_cast<T>(1)}
                 };
             }
+
+            // Only N=2 and N=3 have a defined normal set.
+            return {};
         }
 
         /**
